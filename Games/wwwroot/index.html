@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aetheria MMO</title>
+  <link rel="stylesheet" href="mmo.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="view"></canvas>
+    <div id="vignette"></div>
+    <div id="flash"></div>
+
+    <div id="hud" class="hidden">
+      <div class="portrait"><span id="portraitLevel">1</span></div>
+      <div class="vitals">
+        <div class="bar hp">
+          <span id="hpFill"></span>
+          <em id="hpText">40/40</em>
+        </div>
+        <div class="bar xp">
+          <span id="xpFill"></span>
+          <em id="xpText">0/70 XP</em>
+        </div>
+      </div>
+      <div id="stats">
+        <span id="nameTag">-</span>
+        <span class="chip lvl" id="levelTag">Lv 1</span>
+        <span class="chip gold" id="goldTag">0g</span>
+        <span class="chip potion" id="potionTag">Potion x2</span>
+        <span class="chip online" id="onlineTag">1 online</span>
+      </div>
+    </div>
+
+    <div id="questTracker" class="hidden">
+      <header>Quest</header>
+      <strong id="questTitle"></strong>
+      <div class="questbar"><span id="questFill"></span></div>
+      <span id="questGoal"></span>
+    </div>
+
+    <div id="minimapWrap" class="hidden">
+      <div class="mm-head"><span>Surroundings</span><span class="mm-coords" id="mmCoords">-</span></div>
+      <canvas id="minimap"></canvas>
+      <div class="mm-legend">
+        <span class="dot you"></span>You
+        <span class="dot mob"></span>Foe
+        <span class="dot npc"></span>NPC
+      </div>
+    </div>
+
+    <div id="floats"></div>
+
+    <div id="chat">
+      <div id="log"></div>
+      <input id="chatInput" type="text" maxlength="140" placeholder="Enter to chat..." autocomplete="off" />
+    </div>
+
+    <div id="tips" class="hidden">
+      <span><kbd>WASD</kbd> move</span>
+      <span><kbd>Space</kbd>/<kbd>Click</kbd> attack</span>
+      <span><kbd>E</kbd> interact</span>
+      <span><kbd>Q</kbd> potion</span>
+      <span><kbd>Enter</kbd> chat</span>
+    </div>
+
+    <div id="overlay">
+      <div class="panel">
+        <h1>Aetheria</h1>
+        <p class="sub">A tiny shared world. Other players are real.</p>
+        <input id="nameInput" type="text" maxlength="14" placeholder="Your name" autocomplete="off" />
+        <button id="playBtn">Enter the realm</button>
+        <p id="status">Connecting...</p>
+      </div>
+    </div>
+  </div>
+  <script src="mmo.js"></script>
+</body>
+</html>
